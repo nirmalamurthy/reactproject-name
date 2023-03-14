@@ -1,0 +1,46 @@
+[
+    {
+        "name":"Nirmala",
+        "clg":"MSRUAS",
+        "branch":"Civil",
+        "course":"B.Tech",
+        "duration":"4 years",
+        "contact":["123","456","567"],
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuYbNVEqGu37GiEguXV7jNrH-TrdepnxXUBg&usqp=CAU"
+    },
+    {
+        "name":"Murthy",
+        "clg":"St.Terasa",
+        "branch":"PUC",
+        "course":"Arts",
+        "duration":"2 years",
+        "contact":["123","456","567"],
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZRGQFYCZ-7rJInr-R6em62L1msxNPrXphA&usqp=CAU"
+    },
+    {
+        "name":"Rakshitha",
+        "clg":"Reva",
+        "branch":"CS",
+        "course":"BE",
+        "duration":"4 years",
+        "contact":["123","456","567"],
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmB__H_U3L6ERkEuctfkbzbW0WUHdOX0pnDg&usqp=CAU"
+    },
+    {
+        "name":"Varshani",
+        "clg":"BMS",
+        "branch":"MBBS",
+        "course":"Medical",
+        "duration":"5 years",
+        "contact":["123","456","567"],
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn5lL66DoDyM6PuFNxLotptd-8H6zldokrxQ&usqp=CAU"
+    },
+    {
+        "name":"Panchami",
+        "clg":"Vidya Mandir",
+        "branch":"PUC",
+        "course":"Commerce",
+        "duration":"2 years","contact":["123","456","567"],
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnqfWX5OgKmma_66GLKHzEid3nu-ts7Mi_3A&usqp=CAU"
+    }
+]
