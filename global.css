@@ -1,19 +1,24 @@
+.subBlock > button{
+    background-color: rgb(181, 196, 196);
+    border:groove;
+    color: rgb(19, 7, 7);
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    display: inline;
+}
+
+.subBlock  :hover
+{
+    opacity: 20;
+}
+
 .mainBlock{
-    border:5px solid black;
-    width:400 px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-
-}
-
-img{
-    width : 200px;
-    height: 250px;
-}
-
-.parentBlock {
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-direction: column;
+    top: auto;
+    height: 80vh;
 }
