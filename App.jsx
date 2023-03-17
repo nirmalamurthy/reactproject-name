@@ -1,109 +1,21 @@
-//----1)SAMPLE CODE
-// import React, { Component } from 'react'
+//----1) FAKER CONCEPT TO GENERATE  RANDOM PICS etc
 
-// export default class App extends Component {
-// constructor()
-// {
-//     super()
-//     this.state={
-//         username:"Nirmala",
-//         count:0
-//     }
-// }
-// handelChange=()=>
-// {
-//     this.setState({username:"Rakshi"})
-// }
-// handelNumberChange=()=>
-// {
-//     this.setState({count:1})
-// }
-
-
-
-//   render() {
-//     return (
-//       <div>
-//         <h1>{this.state.username}</h1>
-//         <h1>{this.state.count}</h1>
-//         <button onClick={this.handelChange}>CLICK TO CHANGE</button>
-//         <button onClick={this.handelNumberChange}>CLICK THE NUMBER</button>
-//       </div>
-//     )
-//   }
-// }
-
-
-//-------2)COUNTER APPLICATION FOR NUM INCREMENT ,DECREMENT,RESET
-
-// import React, { Component } from 'react'
-// import "./global.css"
-
-// export default class App extends Component {
-// constructor()
-// {
-//     super()
-//     this.state={
-//         count:0
-//     }
-// }
-
-// handleIncrement=()=>
-// {
-//     this.setState({count:this.state.count+1})
-// }
-// handleDecrement=()=>
-// {
-//     this.setState({count:this.state.count-1})
-// }
-// handleReset=()=>
-// {
-//     this.setState({count:0})
-// }
-// render()
-// {
-//     return(
-//         <div className='mainBlock'>
-            
-//             <div className='subBlock'>
-//             <h1>{this.state.count}</h1>
-            
-//             <h1>{this.state.handleIncrement}</h1>
-//             <h1>{this.state.handleDecrement}</h1>
-//             <h1>{this.state.handleReset}</h1>
-//             <button onClick={this.handleIncrement}>+INCREMENT</button>
-//             <button onClick={this.handleDecrement}>-DECREMENT</button>
-//             <button onClick={this.handleReset}>RESET</button>
-//             </div>
-//         </div>
-//     )
-// }
-
-  
-// }
-
-//-----3)HOOKS
-
-// import React ,{useState}from 'react'
-
+// import React from 'react'
+// import{faker} from '@faker-js/faker'
+// import { useState } from 'react'
 
 // const App = () => {
-//     let [username,setusername]=useState("nirmala")
-//     let[count,setcount]=useState(0)
-
-//     let handlename=()=>{
-//         setusername("chumi")
+//     let [img , setImg] =useState(faker.image.avatar())
+//     let handleChange=()=>{
+//         setImg(faker.image.avatar())
 //     }
 
-//     let handlecount=()=>{
-//         setcount(1)
-//     }
+
+
 //   return (
 //     <div>
-//         <h1>{username}</h1>
-//         <h1>{count}</h1>
-//         <button onClick={handlename}>change name</button>
-//         <button onClick={handlecount}>change num</button>
+//         <img src={img} alt=""/>
+//         <button onClick={handleChange}>change</button>
 //     </div>
 //   )
 // }
@@ -111,37 +23,109 @@
 // export default App
 
 
-// -----4)COUNTER APPLICATION BY HOOKS CONCEPT
+//----2) TOAST CONCEPT TO GENERATE POP UP MSGS
 
-import React,{useState} from "react"
-import "./global.css"
+// import React from 'react'
+// import { toast, ToastContainer } from 'react-toastify'
+// import 'react-toastify/dist/ReactToastify.css'
+
+// const App = () => {
+
+//     let handleSubmit=()=>{
+//         toast.success("logged in successfully")
+       
+//     }
+    
+//   return (
+//     <div>
+//         <ToastContainer/>
+//         <button onClick={handleSubmit}>CLICK FOR MSG</button>
+//     </div>
+//   )
+// }
+
+// export default App
 
 
-const App=()=>{
-    let[count,setcount]=useState(0)
+//----3)EVENTS
 
-    let handleincrement=()=>
+// 1.egs for nonsynthetic event
+
+// import React, { Component } from 'react'
+
+// export default class App extends Component {
+//     constructor()
+//     {
+//         super()
+//         this.state={username:"APPU"}
+//     }
+//     componentDidMount()
+//     {
+//         let btn=document.querySelector('button')
+//         btn.addEventListener('click',()=>{
+//             this.setState({username:this.state.username="KING OF MANY HEARTS"})
+//         })
+//     }
+// render() {
+//     return (
+//         <>
+//       <div>{this.state.username}</div>
+//       <button>CHANGE</button>
+//       </>
+//     )
+//   }
+// }
+  
+
+
+//  ----2)
+
+// import React, { Component } from 'react'
+
+// export default class App extends Component {
+
+//     constructor()
+//     {
+//         super()
+//         this.state={username:""}
+//     }
+//     componentDidMount()
+//     {
+//         let input=document.querySelector('input')
+//         input.addEventListener("keypress",(e)=>{
+//             this.setState({username:e.target.value})
+//         })
+//     }
+//   render() {
+//     return (
+//       <>
+//       <h1>{this.state.username}</h1>
+//       <input type="text"/>
+//       </>
+//     )
+//   }
+// }
+
+
+
+// egs for SYNTHETIC EVENT
+
+import React, { Component } from 'react'
+
+export default class App extends Component {
+    constructor()
     {
-        setcount(count+1)
+        super()
+        this.state={username:""}
     }
-let handledecrement=()=>
-{
-    setcount(count-1)
-}
-let handlereset=()=>
-{
-    setcount(0)
-}
+  render() {
+    return (
+      <>
+      <h1>{this.state.username}</h1>
+      <input type="text"  onChange={(e)=>{
+        this.setState({username:e.target.value})}}/>
 
-    return(
-        <div className="mainBlock">
-            <h1>{count}</h1>
-            <div className="subBlock">
-            <button onClick={handleincrement}>+INCREMENT</button>
-            <button onClick={handledecrement}>-DECREMENT</button>
-            <button onClick={handlereset}>RESET</button>
-            </div>
-        </div>
+      </>
     )
+  }
 }
-export default App
